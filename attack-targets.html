@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attack Targets - Safe Space</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="cursor-effect.js" defer></script>
+</head>
+<body>    <nav class="sidenav">
+        <div class="logo">
+            <h1>Safe Space</h1>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="attack-targets.html" class="active">Attack Targets</a></li>
+            <li><a href="phishing.html">Phishing Attacks</a></li>
+            <li><a href="malware.html">Malware Infections</a></li>
+            <li><a href="contacts.html">Contact Us</a></li>
+        </ul>
+        <div class="auth-links-sidenav">
+            <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+        </div>
+    </nav>    <main>
+        <section class="intro login-box">
+            <h2 class="neon-text">Understanding Attack Targets</h2>
+            <p class="subtitle">Learn about the most common targets in cyber attacks and how to protect them effectively.</p>
+        </section>
+
+        <section class="attack-types login-box">
+            <h2>Common Attack Targets</h2>
+            <div class="grid-container">
+                <div class="target-card">
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3" alt="Personal Data Protection" class="section-image">
+                    <h3>Personal Information</h3>
+                    <p>Cybercriminals frequently target personal data including:</p>
+                    <ul>
+                        <li>Social Security Numbers</li>
+                        <li>Credit Card Information</li>
+                        <li>Login Credentials</li>
+                        <li>Medical Records</li>
+                        <li>Banking Details</li>
+                    </ul>
+                </div>
+
+                <div class="target-card">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa" alt="Corporate Data" class="section-image">
+                    <h3>Corporate Assets</h3>
+                    <ul>
+                        <li>Intellectual Property</li>
+                        <li>Customer Databases</li>
+                        <li>Financial Records</li>
+                        <li>Employee Information</li>
+                        <li>Business Strategies</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+          <section class="vulnerability-checker login-box">
+            <h2 class="neon-text">Common Vulnerabilities</h2>
+            <div class="vuln-grid">
+                <div class="vuln-card critical">
+                    <h3 class="neon-text">Critical Risk</h3>
+                    <ul>
+                        <li>Unpatched Operating Systems</li>
+                        <li>Default Passwords</li>
+                        <li>Remote Access Vulnerabilities</li>
+                    </ul>
+                </div>
+                <div class="vuln-card high">
+                    <h3>High Risk</h3>
+                    <ul>
+                        <li>Weak Encryption</li>
+                        <li>Missing Security Headers</li>
+                        <li>Outdated Protocols</li>
+                    </ul>
+                </div>
+            </div>
+        </section>        <section class="statistics login-box">
+            <h2 class="neon-text">Attack Statistics</h2>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h4 class="neon-text">Personal Data Breaches</h4>
+                    <p class="stat-number">80%</p>
+                    <p>of cyber attacks target personal information</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Financial Impact</h4>
+                    <p class="stat-number">$3.86M</p>
+                    <p>average cost of a data breach</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Recovery Time</h4>
+                    <p class="stat-number">280</p>
+                    <p>days average to identify and contain a breach</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="real-examples">
+            <h2>Real-Life Attack Examples</h2>
+            <div class="examples-container">
+                <div class="example-card">
+                    <img src="https://mma.prnewswire.com/media/1751167/Colonial_Pipeline_Company_logo_Logo.jpg?p=facebook" alt="Colonial Pipeline" class="example-image">
+                    <a href="https://en.wikipedia.org/wiki/Colonial_Pipeline_ransomware_attack" target="_blank" class="example-title">
+                        <h3>Colonial Pipeline Attack (2021)</h3>
+                    </a>
+                    <div class="example-details">
+                        <p class="example-impact">Impact: $4.4 Million Ransom</p>
+                        <h4>What Happened:</h4>
+                        <p>Hackers gained access through a compromised password, leading to the shutdown of the largest fuel pipeline in the US.</p>
+                        <h4>Attack Method:</h4>
+                        <ul>
+                            <li>VPN account breach</li>
+                            <li>Single-factor authentication</li>
+                            <li>Ransomware deployment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <img src="https://www.bankrate.com/2022/09/09143130/equifax-breach-five-years-later.jpg?auto=webp&optimize=high&crop=16:9" alt="Equifax Breach" class="example-image">
+                    <a href="https://en.wikipedia.org/wiki/2017_Equifax_data_breach" target="_blank" class="example-title">
+                        <h3>Equifax Data Breach (2017)</h3>
+                    </a>
+                    <div class="example-details">
+                        <p class="example-impact">Impact: 147 Million Affected</p>
+                        <h4>What Happened:</h4>
+                        <p>Attackers exploited a web application vulnerability to access sensitive personal and financial data.</p>
+                        <h4>Attack Method:</h4>
+                        <ul>
+                            <li>Unpatched Apache Struts vulnerability</li>
+                            <li>Delayed security updates</li>
+                            <li>Poor security monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

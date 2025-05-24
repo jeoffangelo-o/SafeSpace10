@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Space - Register</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="cursor-effect.js" type="module" defer></script>    <style>
+        body {
+            background: #181a20;
+        }
+    </style>
+</head>
+<body class="login-page">
+    <nav class="sidenav">
+        <div class="logo">
+            <h1>Safe Space</h1>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="attack-targets.html">Attack Targets</a></li>
+            <li><a href="phishing.html">Phishing Attacks</a></li>
+            <li><a href="malware.html">Malware Infections</a></li>
+            <li><a href="contacts.html">Contact Us</a></li>
+        </ul>
+        <div class="auth-links-sidenav">
+            <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a href="register.html" class="active"><i class="fas fa-user-plus"></i> Register</a>
+        </div>
+    </nav>
+    <main class="login-container">
+        <div class="login-box">
+            <div class="login-content">
+                <h2 class="neon-text">Create Account</h2>
+                <p class="subtitle">Join our secure community today</p>
+                
+                <form class="login-form">
+                    <div class="form-group">
+                        <div class="input-icon">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Full Name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-icon">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-icon">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Password" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-icon">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Confirm Password" required>
+                        </div>
+                    </div>
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox" required>
+                            <span>I agree to the Terms & Conditions</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="neon-button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Register
+                    </button>
+                </form>
+                
+                <div class="social-login">
+                    <p>Or sign up with</p>
+                    <div class="social-buttons">
+                        <button class="social-btn google">
+                            <i class="fab fa-google"></i>
+                        </button>
+                        <button class="social-btn github">
+                            <i class="fab fa-github"></i>
+                        </button>
+                        <button class="social-btn linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <p class="register-link">
+                    Already have an account? <a href="login.html">Login here</a>
+                </p>
+            </div>
+        </div>
+    </main>    </body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "cybersec-login",
+  "version": "1.0.0",
+  "description": "Cybersecurity Login System",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "build": "echo 'No build required'"
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+}

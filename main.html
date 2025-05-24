@@ -1,0 +1,122 @@
+<!-- Main page for Safe Space, identical to index.html but without forced login redirect -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Space</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">    <style>
+        body {
+            background: #181a20;
+        }
+    </style>
+    <script>
+        // Check if user is logged in
+        if (!localStorage.getItem('isLoggedIn')) {
+            window.location.href = 'login.html';
+        }
+        function logout() {
+            localStorage.removeItem('isLoggedIn');
+            window.location.href = 'login.html';
+        }
+    </script>
+</head>
+<body class="dark-theme">
+    <nav class="sidenav">
+        <div class="logo">
+            <h1>Safe Space</h1>
+        </div>
+        <ul>
+            <li><a href="main.html" class="active">Home</a></li>
+            <li><a href="attack-targets.html">Attack Targets</a></li>
+            <li><a href="phishing.html">Phishing Attacks</a></li>
+            <li><a href="malware.html">Malware Infections</a></li>
+            <li><a href="contacts.html">Contact Us</a></li>
+        </ul>
+        <div class="auth-links-sidenav">
+            <a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </nav>
+    <main>
+        <section class="intro login-box">
+            <h2 class="neon-text">Your Guide to Digital Safety</h2>
+            <p class="subtitle">Discover essential cybersecurity practices and protect yourself in an increasingly connected world.</p>
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b" alt="Cybersecurity Network" class="hero-image">
+        </section>
+        <section class="cyber-timeline login-box">
+            <h2>Evolution of Cyber Threats</h2>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-date">1988</div>
+                    <h3>The Morris Worm</h3>
+                    <p>The first recognized computer worm on the Internet</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2000</div>
+                    <h3>ILOVEYOU Virus</h3>
+                    <p>Caused $10 billion in damages worldwide</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2017</div>
+                    <h3>WannaCry</h3>
+                    <p>Affected 200,000+ computers across 150 countries</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2023</div>
+                    <h3>AI-Powered Threats</h3>
+                    <p>Rise of sophisticated AI-driven cyber attacks</p>
+                </div>
+            </div>
+        </section>
+        <section class="daily-tips login-box">
+            <h2 class="neon-text">Daily Security Tips</h2>
+            <div class="tips-carousel">
+                <div class="tip-card">
+                    <i class="fas fa-key fa-3x"></i>
+                    <h3>Password Day</h3>
+                    <p>Change your passwords every 90 days and use a password manager</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-shield-alt fa-3x"></i>
+                    <h3>2FA Tuesday</h3>
+                    <p>Enable two-factor authentication on all your accounts</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-sync fa-3x"></i>
+                    <h3>Update Wednesday</h3>
+                    <p>Keep your software and systems up to date</p>
+                </div>
+            </div>
+        </section>
+        <section class="features login-box">
+            <div class="container">
+                <h3 class="neon-text">What You'll Learn</h3>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <i class="fas fa-user-shield fa-3x"></i>
+                        <div>
+                            <h4>Identify common cyber threats</h4>
+                            <p>Learn to recognize and avoid potential security risks.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-lock fa-3x"></i>
+                        <div>
+                            <h4>Protect your personal information</h4>
+                            <p>Keep your sensitive data safe from unauthorized access.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-shield-virus fa-3x"></i>
+                        <div>
+                            <h4>Secure your digital presence</h4>
+                            <p>Implement best practices for online security.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>    </body>
+</html>

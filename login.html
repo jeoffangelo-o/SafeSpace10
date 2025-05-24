@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">    <style>
+        body {
+            background: #181a20;
+        }
+    </style>
+    <script>
+        // Simple login check
+        const credentials = {
+            email: 'admin@gmail.com',
+            password: '12345'
+        };
+
+        function handleLogin(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (email === credentials.email && password === credentials.password) {
+                localStorage.setItem('isLoggedIn', 'true');
+                window.location.href = 'main.html'; // Redirect to main.html after login
+            } else {
+                alert('Invalid login! Use: admin@gmail.com / 12345');
+            }
+        }
+
+        window.onload = function() {
+            document.querySelector('.login-form').addEventListener('submit', handleLogin);
+        }
+    </script>
+</head>
+<body class="login-page">
+    <main class="login-container">
+        <div class="login-box">
+            <div class="login-content">                <h2 class="neon-text">Login</h2>
+                <p class="subtitle">Enter your credentials</p>
+                
+                <form class="login-form">
+                    <div class="form-group">
+                        <div class="input-icon">
+                            <i class="fas fa-user"></i>                            <input type="email" name="email" id="email" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-icon">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" name="password" id="password" placeholder="Password" required>
+                        </div>
+                    </div>
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="neon-button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Login
+                    </button>
+                </form>
+                
+                <div class="social-login">
+                    <p>Or continue with</p>
+                    <div class="social-buttons">
+                        <button class="social-btn google">
+                            <i class="fab fa-google"></i>
+                        </button>
+                        <button class="social-btn github">
+                            <i class="fab fa-github"></i>
+                        </button>
+                        <button class="social-btn linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <p class="register-link">
+                    Don't have an account? <a href="register.html">Sign up now</a>
+                </p>
+            </div>
+        </div>
+    </main>    </body>
+</html>
