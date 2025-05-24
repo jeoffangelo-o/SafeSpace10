@@ -13,26 +13,27 @@
         }
     </style>
     <script>
-        // Simple login check
-        const credentials = {
-            email: 'admin@gmail.com',
-            password: '12345'
-        };
-
+        // Login handler
         function handleLogin(event) {
             event.preventDefault();
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
 
-            if (email === credentials.email && password === credentials.password) {
+            if (email === 'admin@gmail.com' && password === '12345') {
                 localStorage.setItem('isLoggedIn', 'true');
-                window.location.href = 'main.html'; // Redirect to main.html after login
+                localStorage.setItem('user', email);
+                window.location.href = '/main.html';
             } else {
                 alert('Invalid login! Use: admin@gmail.com / 12345');
             }
         }
 
         window.onload = function() {
+            // If already logged in, redirect to main
+            if (localStorage.getItem('isLoggedIn')) {
+                window.location.href = '/main.html';
+                return;
+            }
             document.querySelector('.login-form').addEventListener('submit', handleLogin);
         }
     </script>
@@ -68,23 +69,7 @@
                         <span></span>
                         <span></span>
                         Login
-                    </button>
-                </form>
-                
-                <div class="social-login">
-                    <p>Or continue with</p>
-                    <div class="social-buttons">
-                        <button class="social-btn google">
-                            <i class="fab fa-google"></i>
-                        </button>
-                        <button class="social-btn github">
-                            <i class="fab fa-github"></i>
-                        </button>
-                        <button class="social-btn linkedin">
-                            <i class="fab fa-linkedin-in"></i>
-                        </button>
-                    </div>
-                </div>
+                    </button>                </form>
                 
                 <p class="register-link">
                     Don't have an account? <a href="register.html">Sign up now</a>

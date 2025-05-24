@@ -93,17 +93,6 @@
     margin: 0;
 }
 
-.social-buttons {
-    display: flex;
-    gap: 0.5rem;
-    margin: 1rem 0;
-}
-
-.social-btn {
-    width: 2.5rem;
-    height: 2.5rem;
-}
-
 .register-link {
     grid-column: 1 / -1;
     margin: 1rem 0 0;

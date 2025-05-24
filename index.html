@@ -6,37 +6,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="/auth.css"><script>
-        // Check if user is logged in
-        if (!localStorage.getItem('isLoggedIn')) {
-            window.location.href = 'login.html';
-        }
-
-        // Add logout function
-        function logout() {
-            localStorage.removeItem('isLoggedIn');
-            window.location.href = 'login.html';
-        }
-    </script>    <style>
+    <link rel="stylesheet" href="/auth.css">    <script type="module">
+        import { checkAuth, logout } from './auth.js';
+        window.logout = logout; // Make logout available globally
+        checkAuth();
+    </script>
+    <style>
         body {
             background: #181a20;
-        }
-
-        .logout-btn {
-            background: #ff00cc;
-            color: white;
-            border: none;
-            border-radius: 20px;
-            padding: 8px 20px;
-            font-size: 1em;            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .logout-btn:hover {
-            background: #0ff1ce;
-            transform: translateY(-2px);
         }
     </style>
 </head>
