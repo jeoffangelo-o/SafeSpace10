@@ -28,14 +28,7 @@
             }
         }
 
-        window.onload = function() {
-            // If already logged in, redirect to main
-            if (localStorage.getItem('isLoggedIn')) {
-                window.location.href = '/main.html';
-                return;
-            }
-            document.querySelector('.login-form').addEventListener('submit', handleLogin);
-        }
+       
     </script>
 </head>
 <body class="login-page">
