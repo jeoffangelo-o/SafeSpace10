@@ -2,12 +2,16 @@
   "name": "cybersec-login",
   "version": "1.0.0",
   "description": "Cybersecurity Login System",
-  "main": "index.html",
-  "scripts": {
+  "main": "index.html",  "scripts": {
     "start": "serve .",
-    "build": "echo 'No build required'"
+    "build": "cp -r * public/",
+    "dev": "serve .",
+    "deploy": "vercel --prod"
   },
   "dependencies": {
     "serve": "^14.2.1"
+  },
+  "devDependencies": {
+    "vercel": "^24.0.0"
   }
 }
